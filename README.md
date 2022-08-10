@@ -2,7 +2,9 @@ HTML setup contains a basic input form and a submit button.
 
 A 'grocery-container' class is setup which dynamically creates list as user inputs items in the form. The items with the class of 'title' contain an edit button and delete button. 
 
+
 /** addItem function **/
+
 The input in the form is assigned to a variable 'value'. Each input has a unique 'id' attached to it.
 
 There are three scenarios of submitting: 
@@ -30,6 +32,7 @@ After editing is done, the function is setBackToDefault() called.
 
 
 /** createList() function **/
+
 <article> tag assigned into 'element' variable. The class 'grocery-item' in the HTML <article> tag. The parent <article> tag contains the the items with the class of 'title' contain an edit button and delete button to be displayed. 
 
 The class 'grocery-item' is added to each 'element'. Each 'element' is assigned the unique 'id' to it added as a 'data-id'. This is done by first by 'createAttribute('data-id')' to a variable and then assigning its value the unique 'id'. Following that the 'element' variable is attached to the newly introduced variable containing the id with the function 'setAttributeNode(attr)'.
@@ -40,10 +43,12 @@ The parent of the <article> tag 'grocery-list' is appended using the 'appendChil
 
 
 /** displayAlert() function **/
+
 'alert' class placed at the top of the UI is manipulated by using the function displayAlert(). It receives the alert pop-up text and add the classes 'danger' & 'success' to the 'alert' class depending on the scenario. 
 
 
 /** clearItems() function **/
+
 This function clears all the items of the list in the UI. It is accessed by the 'Clear Items' button at the bottom of the list. 
 
 The dynamically created classes of 'grocery-item' are accessed using 'querySelectorAll' and assigned in a variable 'items'. Since each of them are added dynamically and is an HTML body, they are removed by iterating over each of them and using 'removeChild()' function to its immediate parent 'grocery-list'.
@@ -52,12 +57,16 @@ The parent of 'grocery-list' 'grocery-container' also has its 'show-container' c
 
 The 'groceryList' key that contains all the 'id' & 'value' pairs of the input values as objects in an array, is cleared as well. 
 
+
 /** editButton() function **/
+
 Editing is done within the UI as well as the local storage with the aid of three editing variables; 'editElement' which is an empty string, 'editFlag' which is set to false and 'editId' which is empty as well. 
 
 A variable 'element' is created to access the parent 'grocery-item' of the button's parent 'btn-container'. Upon clicking, the variable 'editElement' is given access to the 'title' class of the HTML body. editElement is then given the value of the input and the editId takes the value of the 'data-id'. 
 
+
 /** deleteButton() function **/
+
 The 'grocery-item' class is to be removed. The parent element of the button is 'btn-container', which has a parent element of 'grocery-item'.
 
 A variable 'element' is created to access the parent 'grocery-item' of the button's parent 'btn-container'upon clicking. Using the removeChild() function, the dynamically added 'grocery-item' child class is removed from the 'grocery-list' parent.  
@@ -65,6 +74,7 @@ A variable 'element' is created to access the parent 'grocery-item' of the butto
 The unique 'id' of each item in the list is then accessed and passed into a variable 'id'. The 'id' is then passed into the function removeFromLocalStorage() to remove it from the local storage as well. 
 
 /** Local Storage Manipulation **/
+
 The functions used to manipulate the local storage are:
 
  - addToLocalStorage() 
