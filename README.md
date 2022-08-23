@@ -1,3 +1,5 @@
+VIEW THE PROJECT HERE: https://mellifluous-horse-eea21e.netlify.app/
+
 HTML setup contains a basic input form and a submit button.
 
 A 'grocery-container' class is setup which dynamically creates list as user inputs items in the form. The items with the class of 'title' contain an edit button and delete button. 
